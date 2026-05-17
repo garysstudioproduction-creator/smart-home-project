@@ -1,1 +1,39 @@
+type: custom:button-card
+name: Kino
+icon: mdi:projector-screen-outline
 
+tap_action:
+  action: navigate
+  navigation_path: /domacnost-rodina/6
+
+custom_fields:
+  status: |
+    [[[
+      const temp = states['sensor.debian_cpu_package_temp']?.state;
+      const cpu = states['sensor.debian_cpu_total']?.state;
+
+      return `
+        <div style="font-size:16px; font-weight:600; color:white;">
+          Teplota: ${temp ?? '--'} °C
+        </div>
+
+        <div style="font-size:14px; color:rgba(255,255,255,0.72); margin-top:6px;">
+          CPU: ${cpu ?? '--'} %
+        </div>
+      `;
+    ]]]
+
+styles:
+  card:
+    - border-radius: 30px
+    - padding: 20px
+    - height: 200px
+    - background: linear-gradient(135deg, rgba(20,40,60,0.96), rgba(10,20,40,0.96))
+
+  name:
+    - color: white
+    - font-size: 26px
+    - font-weight: 800
+
+  icon:
+    - color: white
