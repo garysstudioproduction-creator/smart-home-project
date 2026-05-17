@@ -29,7 +29,7 @@ Gaming room dashboard with:
 
 ## Living Room Dashboard
 
-![Living Room Dashboard](dashboards/living-room/living-room.png)
+![Living Room Dashboard](dashboards/living-room/living room.png)
 
 Living room dashboard featuring:
 - multi-light control
