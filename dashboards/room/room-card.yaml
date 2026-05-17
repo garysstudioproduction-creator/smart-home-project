@@ -1,1 +1,40 @@
+type: custom:button-card
+name: Pokoj
+icon: mdi:gamepad
 
+tap_action:
+  action: navigate
+  navigation_path: /domacnost-rodina/pokoj
+
+custom_fields:
+  status: |
+    [[[
+      const lightOn = states['light.svetla_pokoj']?.state === 'on';
+      const tv = states['media_player.g_cinema_2']?.state;
+      const tvOn = tv === 'on' || tv === 'playing';
+
+      return `
+        <div style="font-size:16px; line-height:1.2; color:white; font-weight:600;">
+          ${lightOn ? 'Světlo zapnuto' : 'Světlo vypnuto'}
+        </div>
+
+        <div style="font-size:14px; line-height:1.2; color:rgba(255,255,255,0.72); margin-top:6px;">
+          ${tvOn ? 'TV zapnutá' : 'TV vypnutá'}
+        </div>
+      `;
+    ]]]
+
+styles:
+  card:
+    - border-radius: 30px
+    - padding: 20px
+    - height: 200px
+    - background: linear-gradient(135deg, rgba(34,53,108,0.96), rgba(85,34,106,0.96))
+
+  name:
+    - color: white
+    - font-size: 26px
+    - font-weight: 800
+
+  icon:
+    - color: white
