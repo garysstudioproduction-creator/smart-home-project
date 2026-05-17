@@ -2,36 +2,72 @@
 
 Custom smart home ecosystem built with Home Assistant, ESPHome and AI integrations.
 
-## Overview
-
-This project is my personal smart home system focused on:
+This repository contains my personal smart home setup focused on:
 - modern dashboard design
 - automation
 - AI integrations
-- room control
-- monitoring
+- server monitoring
 - self-hosting
-
-Built and maintained as a real-world homelab and smart home environment.
+- smart room control
 
 ---
 
-## Features
+# Preview
+
+## Room Dashboard
+
+![Room Dashboard](dashboards/room/room-dashboard.png)
+
+Gaming room dashboard with:
+- smart lighting
+- TV control
+- sleep automation
+- custom UI
+- responsive layout
+
+---
+
+## Living Room Dashboard
+
+![Living Room Dashboard](dashboards/living-room/living-room-dashboard.png)
+
+Living room dashboard featuring:
+- multi-light control
+- smart sockets
+- TV integration
+- dynamic device states
+
+---
+
+## Cinema Dashboard
+
+![Cinema Dashboard](dashboards/cinema/cinema-dashboard.png)
+
+Cinema/media dashboard with:
+- server monitoring
+- CPU temperature monitoring
+- media controls
+- homelab integration
+
+---
+
+# Features
 
 - Dynamic room dashboards
-- Smart lighting control
-- TV integrations
+- Smart lighting automation
+- TV/media integrations
 - ESPHome devices
+- MQTT integrations
 - AI assistant integrations
-- Server monitoring
 - Energy monitoring
+- Server monitoring
 - Responsive mobile UI
 - Custom button-card layouts
 - Real-time device states
 
 ---
 
-## Technologies
+# Technologies
 
 - Home Assistant
 - ESPHome
@@ -40,41 +76,90 @@ Built and maintained as a real-world homelab and smart home environment.
 - Linux
 - Node-RED
 - OpenAI
+- Zigbee2MQTT
 - Custom Button Card
 
 ---
 
-## Dashboard Preview
-
-![Dashboard](screenshots/dashboard.png)
-
----
-
-## Dashboard Configs
-
-### Room Card
-- Dynamic TV status
-- Smart light states
-- Custom gradients
-- Responsive layout
-
-### Cinema Card
-- Server temperature monitoring
-- CPU monitoring
-- Media room controls
-
-### Living Room Card
-- Multi-light control
-- TV integration
-- Smart socket states
-
----
-
-## Repository Structure
+# Repository Structure
 
 ```txt
-screenshots/
 dashboards/
+├── room/
+├── living-room/
+└── cinema/
+
 automations/
 esphome/
 docs/
+screenshots/
+```
+
+---
+
+# Dashboard Architecture
+
+```txt
+Home Assistant
+├── MQTT
+├── ESPHome
+├── Zigbee2MQTT
+├── AI integrations
+├── Media control
+├── Smart lighting
+└── Server monitoring
+```
+
+---
+
+# Dashboard Examples
+
+## Room Card
+- Dynamic TV status
+- Smart lighting states
+- Gradient UI
+- Gaming room layout
+
+## Living Room Card
+- Multi-device monitoring
+- Smart sockets
+- Media integration
+- Dynamic status updates
+
+## Cinema Card
+- CPU monitoring
+- Temperature monitoring
+- Media room controls
+- Homelab overview
+
+---
+
+# Goals
+
+The goal of this project is to build a modern smart home ecosystem combining:
+- automation
+- AI
+- monitoring
+- self-hosting
+- UI/UX design
+
+while continuously improving my technical and frontend skills.
+
+---
+
+# Future Plans
+
+- AI voice assistant
+- Better automation system
+- Presence detection improvements
+- Advanced mobile dashboards
+- Energy optimization
+- More ESPHome devices
+- Smart notifications
+- Interactive dashboard animations
+
+---
+
+# About
+
+This project is actively developed and continuously improved as part of my personal smart home and homelab environment.
