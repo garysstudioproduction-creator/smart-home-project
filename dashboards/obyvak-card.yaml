@@ -1,0 +1,46 @@
+type: custom:button-card
+name: Obývák
+icon: mdi:sofa-single
+
+tap_action:
+  action: navigate
+  navigation_path: /domacnost-rodina/obyvak
+
+custom_fields:
+  status: |
+    [[[
+      const l1 = states['switch.0x449fdafffed7bf0c_l1']?.state === 'on';
+      const l2 = states['switch.0x449fdafffed7bf0c_l2']?.state === 'on';
+      const l3 = states['switch.0x449fdafffed7d104_l1']?.state === 'on';
+      const l4 = states['switch.0x449fdafffed7d104_l2']?.state === 'on';
+
+      const lightsOn = [l1, l2, l3, l4].filter(v => v).length;
+
+      const tv = states['media_player.lg_webos_tv_d259']?.state;
+      const tvOn = tv === 'on' || tv === 'playing';
+
+      return `
+        <div style="font-size:16px; line-height:1.2; color:white; font-weight:600;">
+          ${lightsOn} / 4 světel zapnuto
+        </div>
+
+        <div style="font-size:14px; line-height:1.2; color:rgba(255,255,255,0.72); margin-top:6px;">
+          ${tvOn ? 'TV zapnutá' : 'TV vypnutá'}
+        </div>
+      `;
+    ]]]
+
+styles:
+  card:
+    - border-radius: 30px
+    - padding: 20px
+    - height: 200px
+    - background: linear-gradient(135deg, rgba(34,53,108,0.96), rgba(85,34,106,0.96))
+
+  name:
+    - color: white
+    - font-size: 26px
+    - font-weight: 800
+
+  icon:
+    - color: white
