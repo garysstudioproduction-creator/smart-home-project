@@ -46,7 +46,7 @@ Built and maintained as a real-world homelab and smart home environment.
 
 ## Dashboard Preview
 
-![Dashboard](dashboard.png)
+![Dashboard](screenshots/dashboard.png)
 
 ---
 
