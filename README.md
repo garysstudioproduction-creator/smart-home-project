@@ -16,7 +16,7 @@ This repository contains my personal smart home setup focused on:
 
 ## Room Dashboard
 
-![Room Dashboard](dashboards/room/room-dashboard.png)
+![Room Dashboard](dashboards/room/room.png)
 
 Gaming room dashboard with:
 - smart lighting
@@ -29,7 +29,7 @@ Gaming room dashboard with:
 
 ## Living Room Dashboard
 
-![Living Room Dashboard](dashboards/living-room/living-room-dashboard.png)
+![Living Room Dashboard](dashboards/living-room/living-room.png)
 
 Living room dashboard featuring:
 - multi-light control
@@ -41,7 +41,7 @@ Living room dashboard featuring:
 
 ## Cinema Dashboard
 
-![Cinema Dashboard](dashboards/cinema/cinema-dashboard.png)
+![Cinema Dashboard](dashboards/cinema/cinema.png)
 
 Cinema/media dashboard with:
 - server monitoring
@@ -86,13 +86,20 @@ Cinema/media dashboard with:
 ```txt
 dashboards/
 ├── room/
+│   ├── room-card.yaml
+│   └── room.png
+│
 ├── living-room/
+│   ├── living-room-card.yaml
+│   └── living-room.png
+│
 └── cinema/
+    ├── cinema-card.yaml
+    └── cinema.png
 
 automations/
 esphome/
 docs/
-screenshots/
 ```
 
 ---
